@@ -1,5 +1,5 @@
 function randomQuote() {
-  $.getJSON("http://fathomless-garden-32766.herokuapp.com/api/random/?format=json", function (json) {
+  $.getJSON("https://fathomless-garden-32766.herokuapp.com/api/random/?format=json", function (json) {
     $('.quote').text('\"' + json.quote_quote + '\"');
     $('.quoteFooter').text(json.quote_author)
     twitterShare.setAttribute("href", "https://twitter.com/share?url=&via=wilsoftGM&related=&text=" + encodeURIComponent(json.quote + "\n" +json.author)+ " -- ");
