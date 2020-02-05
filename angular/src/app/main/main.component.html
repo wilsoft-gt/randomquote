@@ -1,0 +1,18 @@
+<h1>Quotes</h1>
+<div *ngIf="quote">
+    Has seleccionado un quote de {{quote.quote_author}}
+</div>
+<div class="navigator">
+    <button *ngIf="quotes.previous" (click)="getNext(quotes.previous)">Previous</button>
+    <button (click)="getNext(quotes.next)">Next</button>
+</div>
+<ul>
+    <li *ngFor="let quoteN of quotes.results" >
+            <p>{{quoteN.quote_quote}}</p>
+
+            <i>
+                <sub *ngIf="quoteN.quote_author; else anonimo">{{quoteN.quote_author}}</sub>
+                <ng-template #anonimo><sub>Anonimo</sub></ng-template>
+            </i>
+    </li>
+</ul>

@@ -1,0 +1,12 @@
+<h1>Quote</h1>
+
+<ul>
+    <li>
+            <p>{{quoteObj.results[0].quote_quote}}</p>
+
+            <i>
+                <sub *ngIf="quoteObj.results[0].quote_author; else empty">{{quoteObj.results[0].quote_author}}</sub>
+                <ng-template #empty><sub>Anonimo</sub></ng-template>
+            </i>
+    </li>
+</ul>

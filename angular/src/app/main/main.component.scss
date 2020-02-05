@@ -1,0 +1,57 @@
+h1 {
+    margin-left: 2em;
+}
+
+ul {
+    list-style-type: none;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    li {
+        padding: 0;
+        background-color: gainsboro;
+        border: 1px solid black;
+        padding: 2em;
+        margin-bottom: 1em;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateX(2px);
+        }
+
+        p {
+            font-family: fantasy;
+
+            &::before, &::after {
+                content: '\"';
+            } 
+        }
+
+        i sub:before {
+            content: "~/";
+            font-size: smaller;
+        }
+    }
+
+    
+}
+
+.navigator {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+
+    button {
+        background-color: lightgray;
+        border: none;
+        color: rgb(0, 0, 126);
+        padding: 0.5em;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateX(2px);
+        }
+    }
+}
