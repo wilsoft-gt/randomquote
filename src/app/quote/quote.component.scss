@@ -1,0 +1,17 @@
+.containerQuote{
+    margin: 0 auto;
+    height: 75vh;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(73, 73, 73);
+    p {
+        font-size: xx-large;
+        font-weight: lighter;
+        margin: 0;
+        &::after, &::before {
+            content: "\"";
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+<div class="navigator">
+    <button id="previous" [disabled]="!quotes.previous" (click)="getNext(quotes.previous,-1)">Previous</button>
+    <div>
+        <small>{{chunk}}/{{quotes.count/50 | number:"1.0-0"}}</small>
+    </div>
+    <button id="next" [disabled]="!quotes.next" (click)="getNext(quotes.next,1)">Next</button>
+</div>
+<ul>
+    <li *ngFor="let quoteN of quotes.results" (click)="onSelect(quoteN)">
+            <p>{{quoteN.quote_quote}}</p>
+            <hr>
+            <i>
+                <sub *ngIf="quoteN.quote_author; else anonimo">{{quoteN.quote_author}}</sub>
+                <ng-template #anonimo><sub>Unknown</sub></ng-template>
+            </i>
+    </li>
+</ul>

@@ -1,0 +1,16 @@
+<div *ngIf="quoteId">
+    <div class="container">
+        <div *ngFor="let quote of quotes.results">
+            <div class="codeContainer" *ngIf="quote.id == quoteId">
+                <div class="quote">{{quote.quote_quote}}</div>
+                <hr>
+                <div>
+                    <i>
+                        <sub class="author" *ngIf="quote.quote_author; else none">{{quote.quote_author}}</sub>
+                        <ng-template #none>Unknown</ng-template>
+                    </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

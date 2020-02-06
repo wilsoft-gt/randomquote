@@ -1,0 +1,12 @@
+<div class="containerQuote">
+    <div class="wrapper">
+        <div class="quote">
+            <p>{{quoteObj.results[0].quote_quote}}</p>
+            <hr>
+            <i>
+                <sub *ngIf="quoteObj.results[0].quote_author; else none">~/ {{quoteObj.results[0].quote_author}}</sub>
+                <ng-template #none>~/ Unknown</ng-template>
+            </i>
+        </div>
+    </div>
+</div>
