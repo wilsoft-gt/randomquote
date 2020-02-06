@@ -3,11 +3,14 @@
     Has seleccionado un quote de {{quote.quote_author}}
 </div>
 <div class="navigator">
-    <button *ngIf="quotes.previous" (click)="getNext(quotes.previous)">Previous</button>
-    <button (click)="getNext(quotes.next)">Next</button>
+    <button id="previous" [disabled]="!quotes.previous" (click)="getNext(quotes.previous,-1)">Previous</button>
+    <div>
+        <small>{{chunk}}/{{quotes.count/50 | number:"1.0-0"}}</small>
+    </div>
+    <button id="next" [disabled]="!quotes.next" (click)="getNext(quotes.next,1)">Next</button>
 </div>
 <ul>
-    <li *ngFor="let quoteN of quotes.results" >
+    <li *ngFor="let quoteN of quotes.results" (click)="onSelect(quoteN)">
             <p>{{quoteN.quote_quote}}</p>
 
             <i>

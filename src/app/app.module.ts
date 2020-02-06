@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { QuoteComponent } from './quote/quote.component';
 
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { SimpleComponent } from './simple/simple.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    QuoteComponent
+    QuoteComponent,
+    SimpleComponent
   ],
   imports: [
     BrowserModule,

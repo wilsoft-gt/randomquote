@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpService } from '../http.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-main',
@@ -9,28 +10,37 @@ import { HttpService } from '../http.service';
 export class MainComponent implements OnInit {
   quotes: Object;
   quote: Object;
+  chunk: number = 1
   next: string = "https://fathomless-garden-32766.herokuapp.com/api/quotes/?format=json";
 
-  constructor(private _http: HttpService) { }
+  constructor(
+    private _http: HttpService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
     this.parseData()
   }
 
-  getNext(next) {
+  getNext(next, data) {
     this.next = next
+    if (data > 0) {
+      this.chunk += 1
+    } else {
+      this.chunk -= 1
+    }
     this.parseData()
   }
 
   parseData() {
-    this._http.getData(this.next).subscribe(dat => {
+    this._http.nextAssign(this.next)
+    this._http.getData().subscribe(dat => {
       this.quotes = dat;
     })
   }
 
-  getQuote(obj){
-    this.quote = obj
-    console.log(this.quote)
+  onSelect(department) {
+    this.router.navigate(['simple', department.id])
   }
 
 }

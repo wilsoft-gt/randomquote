@@ -1,0 +1,15 @@
+<div *ngIf="quoteId">
+    <div>
+        You selected the data id {{quoteId}}
+    </div>
+    <div>
+        From data: <br>
+        <code *ngFor="let quote of quotes.results">
+            <div *ngIf="quote.id == quoteId">
+                {{quote.quote_quote}} <br>
+                {{quote.quote_author}} <br>
+                {{quote.id}}
+            </div>
+        </code>
+    </div>
+</div>
