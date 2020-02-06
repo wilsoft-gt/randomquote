@@ -1,15 +1,16 @@
 <div *ngIf="quoteId">
-    <div>
-        You selected the data id {{quoteId}}
-    </div>
-    <div>
-        From data: <br>
-        <code *ngFor="let quote of quotes.results">
-            <div *ngIf="quote.id == quoteId">
-                {{quote.quote_quote}} <br>
-                {{quote.quote_author}} <br>
-                {{quote.id}}
+    <div class="container">
+        <div *ngFor="let quote of quotes.results">
+            <div class="codeContainer" *ngIf="quote.id == quoteId">
+                <div class="quote">{{quote.quote_quote}}</div>
+                <hr>
+                <div>
+                    <i>
+                        <sub class="author" *ngIf="quote.quote_author; else none">{{quote.quote_author}}</sub>
+                        <ng-template #none>Unknown</ng-template>
+                    </i>
+                </div>
             </div>
-        </code>
+        </div>
     </div>
 </div>

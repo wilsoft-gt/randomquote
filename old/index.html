@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+ -->    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Random Quotes</title>
+  </head>
+  <body id="body" onload="randomQuote()">
+
+    <div class="container vertical-center">
+      <div class="row" style="margin: 0 auto;">
+        <div class="col-md-10 col-lg-10 col-sm-12" style="margin: 0 auto;">
+          <div class="card bg-transparent border border-white">
+            <div class="card-body">
+              <blockquote class="blockquote text-right">
+                <p class="mb-0 quote"></p>
+                <footer class="blockquote-footer quoteFooter"></footer>
+              </blockquote>
+              <div>
+                  <!-- random quote butto --> 
+                  <button onclick="randomQuote()" type="button" id="randomBtn" class="btn bg-transparent border border-white pull-right">
+                      <i class="fa fa-random" aria-hidden="true" style="font-size:1.2em"></i>
+                  </button>
+                  <!-- share twitter -->
+                  <a id="twitterShare" href="" target="_blank">
+                    <button type="button" name="twitter" class="btn bg-transparent border border-white">
+                      <i class="fa fa-twitter" aria-hidden="true" style="font-size:1.3em"></i>
+                    </button>
+                  </a>
+                  <!-- share tumblr -->
+                  <a id="tumblrShare" href="" target="_blank">
+                    <button type="button" name="tumbr" class="btn bg-transparent border border-white">
+                      <i class="fa fa-tumblr" aria-hidden="true"style="font-size:1.3em"></i>
+                    </button>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <footer>
+            Coded by <a href="https://www.wilsonromero.design" target="_blank">wilsoft-gt</a> | View code <a href="https://codepen.io/wilsoft-gt/pen/JpWZdB" target="_blank"><i class="fa fa-codepen"></i></a> <a href="https://github.com/wilsoft-gt/randomquote" target="_blank"><i class="fa fa-github"></i></a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
