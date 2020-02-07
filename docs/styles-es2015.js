@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "body {\n  margin: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3dpbHNvbnJvbWUvRG9jdW1lbnRvcy9hbmd1bGFyIHRlc3RzL3JhbmRvbXF1b3RlL3NyYy9zdHlsZXMuc2NzcyIsInNyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFNBQUE7QUNDSiIsImZpbGUiOiJzcmMvc3R5bGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgICBtYXJnaW46IDA7XG59IiwiYm9keSB7XG4gIG1hcmdpbjogMDtcbn0iXX0= */", '', '']]
+module.exports = [[module.i, "body {\n  margin: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3dpbHNvbi9jb3NhcyBwYXJhIGFwcmVuZGVyL3BhZ2luYSB3ZWIvZnJvbnRlbmQvZmluaXNoZWQgcHJvamVjdHMvcmFuZG9tIHF1b3RlL3NyYy9zdHlsZXMuc2NzcyIsInNyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFNBQUE7QUNDSiIsImZpbGUiOiJzcmMvc3R5bGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgICBtYXJnaW46IDA7XG59IiwiYm9keSB7XG4gIG1hcmdpbjogMDtcbn0iXX0= */", '', '']]
 
 /***/ }),
 
@@ -338,7 +338,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/wilsonrome/Documentos/angular tests/randomquote/src/styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! /home/wilson/cosas para aprender/pagina web/frontend/finished projects/random quote/src/styles.scss */"./src/styles.scss");
 
 
 /***/ })
