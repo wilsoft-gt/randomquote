@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpService } from '../http.service'
+import { quotesData } from '../interfaces'
 
 @Component({
   selector: 'app-simple',
@@ -9,7 +10,7 @@ import { HttpService } from '../http.service'
 })
 export class SimpleComponent implements OnInit {
   quoteId: number;
-  quotes: Object;
+  quotes: quotesData;
   constructor(private route: ActivatedRoute,
     private _http: HttpService) { }
 
@@ -17,7 +18,7 @@ export class SimpleComponent implements OnInit {
   ngOnInit() {
     let got = parseInt(this.route.snapshot.paramMap.get("id"))
     this.quoteId = got
-    this._http.getData().subscribe(dat => {
+    this._http.getData().subscribe((dat : any) => {
       this.quotes = dat;
       console.log(this.quotes)
     })

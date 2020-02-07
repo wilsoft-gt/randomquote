@@ -1,16 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router'
+import { quotesData, singleQuote } from '../interfaces'
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
+
 export class MainComponent implements OnInit {
-  quotes: Object;
-  quote: Object;
-  chunk: number = 1
+
+  quotes: quotesData;
+  quote: singleQuote;
+  chunk: number = 1;
   next: string = "https://fathomless-garden-32766.herokuapp.com/api/quotes/?format=json";
 
   constructor(
@@ -34,7 +37,7 @@ export class MainComponent implements OnInit {
 
   parseData() {
     this._http.nextAssign(this.next)
-    this._http.getData().subscribe(dat => {
+    this._http.getData().subscribe((dat : any) => {
       this.quotes = dat;
     })
   }
