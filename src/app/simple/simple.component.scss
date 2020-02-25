@@ -1,0 +1,33 @@
+.container {
+    height: 80vh;
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(73, 73, 73);
+    .quote {
+        font-weight: lighter;
+        font-size: xx-large;
+        &::before, &::after {
+            content: "\"";
+        }
+    }
+}
+
+.author {
+    font-size: smaller;
+    &::before {
+        content: "\~\/ ";
+    }
+}
+
+code {
+    background-color: rgb(182, 182, 182);
+    border-radius: 10px;
+    
+}
+
+.codeContainer {
+    margin: 2em;
+}

@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary: rgb(54, 54, 54);
+
+body {
+    margin: 0;
+    font-size: 18px;
+    height: 100%;
+}
+
+.containerApp {
+    width: 80%;
+    margin: 0 auto;
+
+
+}
+
+header {
+    
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 1em 0;
+    background-color: $primary;
+    z-index: 150;
+    top: 0;
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+      }
+
+
+    a {
+        color: gainsboro;
+        text-decoration: none;
+    }
+
+    a.logo {
+        font-weight: bold;
+        font-size: 1.3em;
+        @media only screen and (max-width: 768px) {
+            font-size: 2em;
+
+          }
+
+    }
+
+    #divider {
+        display: none;
+        @media only screen and (max-width: 768px) {
+            display: block;
+          }
+    }
+
+    nav {
+        float: right;
+        @media only screen and (max-width: 768px) {
+            float: unset;
+            margin-top: 1em;
+          }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            @media only screen and (max-width: 768px) {
+                display: flex;
+                margin: 0;
+                float: none;
+                justify-content: space-between;
+              }
+
+        }
+
+        li a {
+            padding: 1em;
+            @media only screen and (max-width: 768px) {
+                padding: 0.2em;
+              }
+
+            &:hover {
+                background-color: lighten($primary , 10%);
+                @media only screen and (max-width: 768px) {
+                    background-color: lighten($primary , 0%)
+                  }
+            }
+        }
+    }
+
+}
+
+footer {
+    padding: 0.5em;
+    background-color: $primary;
+    text-align: center;
+    color: gainsboro;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

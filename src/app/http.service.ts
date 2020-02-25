@@ -6,10 +6,15 @@ import { HttpClient } from '@angular/common/http'
 })
 export class HttpService {
 
+  next: string
   constructor(private http: HttpClient) { }
 
-  getData(dat){
-    return this.http.get(dat)
+  getData(){
+    return this.http.get(this.next)
+  }
+
+  nextAssign(url){
+    this.next = url
   }
 
   getRandom() {
