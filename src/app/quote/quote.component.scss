@@ -1,17 +1,37 @@
-.containerQuote{
+h1 {
+    margin-left: 2em;
+}
+
+ul {
+    list-style-type: none;
+    width: 80%;
     margin: 0 auto;
-    height: 75vh;
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(73, 73, 73);
-    p {
-        font-size: xx-large;
-        font-weight: lighter;
-        margin: 0;
-        &::after, &::before {
-            content: "\"";
+    padding: 0;
+    li {
+        padding: 0;
+        background-color: gainsboro;
+        border: 1px solid black;
+        padding: 2em;
+        margin-bottom: 1em;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateX(2px);
+        }
+
+        p {
+            font-family: fantasy;
+
+            &::before, &::after {
+                content: '\"';
+            } 
+        }
+
+        i sub:before {
+            content: "~/";
+            font-size: smaller;
         }
     }
+
+    
 }
